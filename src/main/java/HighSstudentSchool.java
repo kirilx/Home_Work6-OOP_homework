@@ -1,15 +1,20 @@
 public class HighSstudentSchool extends Student {
-    private int className ;
-    public HighSstudentSchool(String name, int age, String course) {
+    private int grade;
+
+    public HighSstudentSchool(String name, int age, String course, Integer grade) {
         super(name, age, course);
-        this.className = 0 ;
+        this.grade = grade;
     }
 
-    public int getClassName() {
-        return className;
+    public int getGrade() {
+        return grade;
     }
 
-    public void setClassName(int className) {
-        this.className = className;
+    private void setGrade(int className) {
+        if (grade > 0) {
+            this.grade = className;
+        } else {
+            System.out.println("Grade must be positive");
+        }
     }
 }

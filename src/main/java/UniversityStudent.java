@@ -10,7 +10,7 @@ public class UniversityStudent extends Student {
         return major;
     }
 
-    public void setMajor(String major) {
+    private void setMajor(String major) {
         this.major = major;
     }
 }
