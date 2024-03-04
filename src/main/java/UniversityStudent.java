@@ -1,5 +1,5 @@
 public class UniversityStudent extends Student {
-    private String major ;
+    private String major;
 
     public UniversityStudent(String name, int age, String course, String major) {
         super(name, age, course);
@@ -11,6 +11,11 @@ public class UniversityStudent extends Student {
     }
 
     private void setMajor(String major) {
-        this.major = major;
+        if (major.isEmpty()) {
+            System.out.println("Major cannot be empty");
+
+        } else {
+            this.major = major;
+        }
     }
 }

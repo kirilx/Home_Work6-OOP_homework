@@ -1,9 +1,8 @@
-
 public class Student {
 
-    private String name ;
-    private  int age ;
-    private  String course ;
+    private String name;
+    private int age;
+    private String course;
 
     public Student(String name, int age, String course) {
         this.name = name;
@@ -15,23 +14,35 @@ public class Student {
         return name;
     }
 
-    private void setName(String name) {
-        this.name = name;
+    public void setName(String name) {
+        if (name.isEmpty()) {
+            System.out.println("Name cannot be empty");
+        } else {
+            this.name = name;
+        }
     }
 
     public int getAge() {
         return age;
     }
 
-    private void setAge(int age) {
-        this.age = age;
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Age must be positive");
+        }
     }
 
     public String getCourse() {
         return course;
     }
 
-    private void setCourse(String course) {
-        this.course = course;
+    public void setCourse(String course) {
+        if (course.isEmpty()) {
+            System.out.println("Course cannot be empty");
+        } else {
+            this.course = course;
+        }
     }
 }
